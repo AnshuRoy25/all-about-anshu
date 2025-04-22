@@ -322,7 +322,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contact-form" action="send_email.php" method="POST">
+                    <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -377,40 +377,12 @@
             });
             
             // Form submission (just for demonstration)
-            // Replace the existing form submission handler with this:
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerHTML;
-    
-    // Show loading state
-    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-    submitBtn.disabled = true;
-    
-    fetch(contactForm.action, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-            contactForm.reset();
-        } else {
-            alert(data.message);
-        }
-    })
-    .catch(error => {
-        alert('An error occurred. Please try again later.');
-    })
-    .finally(() => {
-        submitBtn.innerHTML = originalBtnText;
-        submitBtn.disabled = false;
-    });
-});
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! This form is currently not connected to a backend service.');
+                contactForm.reset();
+            });
     
             // Initialize particles.js
             // Initialize particles.js
