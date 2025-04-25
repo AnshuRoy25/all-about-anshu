@@ -20,7 +20,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -33,7 +32,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
 <!-- Hero Section -->
 <section id="home">
     <div id="particles-js" class="particles"></div>
@@ -42,7 +40,22 @@
             <h1 class="glitch" data-text="Hi, I'm Anshu Roy">Hi, I'm Anshu Roy</h1>
             <h3>Engineering Physics Student | Robotics Enthusiast</h3>
             <p>I'm passionate about developing innovative solutions that combine physics concepts with programming and hardware integration. Currently pursuing my B.Tech in Engineering Physics at NIT Hamirpur.</p>
-            <a href="#projects" class="btn">View My Work <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="hero-actions">
+                <a href="#projects" class="btn">View My Work <i class="fas fa-arrow-right"></i></a>
+                
+                <div class="social-icons-container">
+                    <a href="https://github.com/AnshuRoy25" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/anshuroy2006" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/anshuroy2006" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -93,6 +106,9 @@
 <section id="skills">
     <div class="container">
         <h2 class="glitch" data-text="My Skills">My Skills</h2>
+        <!-- Waveform will be inserted here by JavaScript -->
+        
+        <!-- Original skills container (can be hidden via JavaScript) -->
         <div class="skills-container animate-on-scroll">
             <div class="skill-item">
                 <h4>Programming</h4>
@@ -125,53 +141,14 @@
                 </div>
                 <p>Video Production and Editing</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Blog Section -->
-<section id="blog">
-    <div class="container">
-        <h2 class="glitch" data-text="Blog">Blog</h2>
-        <div class="blog-grid">
-            <div class="blog-card animate-on-scroll">
-                <div class="blog-img">
-                    <i class="fas fa-microchip fa-3x"></i>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">April 15, 2025</span>
-                    <h3>Getting Started with Arduino</h3>
-                    <p>An introduction to Arduino programming and basic electronics for beginners. Learn how to set up your first circuit and write your first program.</p>
-                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
             
-            <div class="blog-card animate-on-scroll">
-                <div class="blog-img">
-                    <i class="fas fa-atom fa-3x"></i>
+            <div class="skill-item">
+                <h4>Problem Solving</h4>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%;"></div>
                 </div>
-                <div class="blog-content">
-                    <span class="blog-date">March 28, 2025</span>
-                    <h3>Quantum Physics Explained Simply</h3>
-                    <p>Breaking down complex quantum physics concepts into understandable explanations for non-physicists. Explore the fascinating world of quantum mechanics.</p>
-                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
+                <p>Analytical Thinking, Creative Solutions</p>
             </div>
-            
-            <div class="blog-card animate-on-scroll">
-                <div class="blog-img">
-                    <i class="fas fa-robot fa-3x"></i>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">February 10, 2025</span>
-                    <h3>Building Your First Writing Machine</h3>
-                    <p>A step-by-step guide on how to build an automatic writing machine using Arduino, stepper motors, and easily available components.</p>
-                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="blog-cta">
-            <a href="#" class="btn">View All Posts <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -352,121 +329,14 @@
             <div class="social-links">
                 <a href="https://github.com/AnshuRoy25" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/anshuroy2006" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://instagram.com/anshuroy2006" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
             <p>&copy; 2025 Anshu Roy. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.querySelector('.menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-            
-            menuBtn.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-            
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                });
-            });
-            
-            // Form submission (just for demonstration)
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! This form is currently not connected to a backend service.');
-                contactForm.reset();
-            });
-    
-            // Initialize particles.js
-            // Initialize particles.js
-particlesJS('particles-js', {
-    particles: {
-        number: { 
-            value:50, 
-            density: { enable: true, value_area: 800 } 
-        },
-        color: { value: "#64ffda" },
-        shape: { type: "circle" },
-        opacity: { 
-            value: 0.1,  // Increased opacity
-            random: true 
-        },
-        size: { 
-            value: 4,  // Slightly larger particles
-            random: true 
-        },
-        line_linked: { 
-            enable: true, 
-            distance: 150, 
-            color: "#64ffda", 
-            opacity: 0.3,  // Slightly more visible lines
-            width: 1 
-        },
-        move: { 
-            enable: true, 
-            speed: 2, 
-            direction: "none", 
-            random: true, 
-            straight: false, 
-            out_mode: "out",
-            attract: { enable: false, rotateX: 600, rotateY: 1200 }
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: { 
-                enable: true, 
-                mode: "grab"  // Changed to grab for better visual effect
-            },
-            onclick: { 
-                enable: true, 
-                mode: "push" 
-            }
-        },
-        modes: {
-            grab: {
-                distance: 140,
-                line_linked: { opacity: 0.8 }
-            }
-        }
-    }
-});
-    
-            // Add scroll animations
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.animate-on-scroll');
-                elements.forEach(el => {
-                    const elementPosition = el.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.3;
-                    if (elementPosition < screenPosition) {
-                        el.classList.add('visible');
-                    }
-                });
-            };
-    
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // Run once on load*
-            
-            // Reverse projects order
-            const projectsGrid = document.querySelector('.projects-grid');
-            const projectCards = Array.from(projectsGrid.children);
-            
-            // Remove all projects
-            projectsGrid.innerHTML = '';
-            
-            // Add them back in reverse order
-            projectCards.reverse().forEach(card => {
-                projectsGrid.appendChild(card);
-            });
-        });
-    </script>
+<script src="script.js"></script>
+
 </body>
 </html>
